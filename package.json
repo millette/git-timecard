@@ -1,13 +1,17 @@
 {
   "name": "git-timecard",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Robin Millette",
+    "email": "robin@millette.info",
+    "url": "http://robin.millette.info"
+  },
+  "engines": {
+    "node": ">= 10.16.0"
+  },
   "license": "AGPL-3.0",
   "dependencies": {
     "isomorphic-git": "^0.57.1"
