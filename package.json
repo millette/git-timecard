@@ -1,6 +1,7 @@
 {
   "name": "git-timecard",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "bin": "cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,6 +15,7 @@
   },
   "license": "AGPL-3.0",
   "dependencies": {
-    "isomorphic-git": "^0.58.1"
+    "isomorphic-git": "^0.58.1",
+    "meow": "^5.0.0"
   }
 }
