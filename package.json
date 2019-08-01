@@ -1,7 +1,9 @@
 {
   "name": "git-timecard",
-  "version": "0.0.1",
-  "bin": "cli.js",
+  "version": "0.0.2",
+  "bin": {
+    "gtc": "cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
