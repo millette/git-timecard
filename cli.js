@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 'use strict'
 
 // npm
@@ -8,7 +10,7 @@ const run = require('.')
 
 const cli = meow(`
 	Usage
-	  $ cli <dir>
+	  $ gtc <dir>
 
 	Options
 	  --gap, -g  Maximum gap in minutes (defaults to 120; 2h)
