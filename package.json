@@ -14,6 +14,6 @@
   },
   "license": "AGPL-3.0",
   "dependencies": {
-    "isomorphic-git": "^0.57.1"
+    "isomorphic-git": "^0.58.1"
   }
 }
