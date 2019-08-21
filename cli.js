@@ -23,4 +23,8 @@ const cli = meow(
 )
 
 updateNotifier(cli).notify()
-run({ dir: cli.input[0], max: cli.flags.gap }).catch(console.error)
+run({ dir: cli.input[0], max: cli.flags.gap })
+  .then(console.log)
+  .catch((e) =>
+    console.error(e.name === "ResolveRefError" ? "No .git directory found." : e)
+  )

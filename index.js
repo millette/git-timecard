@@ -7,10 +7,6 @@ const path = require("path")
 // npm
 const git = require("isomorphic-git")
 
-// console.log('GIT KEYS', Object.keys(git.E))
-// const { E: { ResolveRefError } } = git
-// console.log('ResolveRefError', ResolveRefError)
-
 git.plugins.set("fs", fs)
 
 const doit0 = (commits) =>
@@ -74,11 +70,9 @@ const stats = (x) => {
     { el: 0, n: 0 }
   )
   const mc = Math.round(s.el / (s.n * 60))
-  console.log(
-    `${x.length} spurts; ${Math.round(s.el / 360) / 10}h total; ${
-      s.n
-    } commits; ${Math.round(s.n / x.length)} commits/spurt; ${mc} min./commit.`
-  )
+  return `${x.length} spurts; ${Math.round(s.el / 360) / 10}h total; ${
+    s.n
+  } commits; ${Math.round(s.n / x.length)} commits/spurt; ${mc} min./commit.`
 }
 
 module.exports = (opts = {}) =>
