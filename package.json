@@ -33,12 +33,12 @@
     "arrowParens": "always"
   },
   "dependencies": {
-    "isomorphic-git": "^0.60.2",
+    "isomorphic-git": "^0.62.0",
     "meow": "^5.0.0",
     "update-notifier": "^3.0.1"
   },
   "devDependencies": {
-    "healthier": "^3.0.0",
+    "healthier": "^3.0.2",
     "husky": "^2.7.0",
     "lint-staged": "^9.2.3",
     "prettier": "^1.18.2"
