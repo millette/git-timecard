@@ -5,7 +5,7 @@
     "gtc": "cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "healthier"
   },
   "author": {
     "name": "Robin Millette",
@@ -16,8 +16,30 @@
     "node": ">= 10.16.0"
   },
   "license": "AGPL-3.0",
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "trailingComma": "es5",
+    "arrowParens": "always"
+  },
   "dependencies": {
     "isomorphic-git": "^0.60.2",
     "meow": "^5.0.0"
+  },
+  "devDependencies": {
+    "healthier": "^3.0.0",
+    "husky": "^2.7.0",
+    "lint-staged": "^9.2.3",
+    "prettier": "^1.18.2"
   }
 }
