@@ -28,7 +28,7 @@ const doit1 = (max, els) => {
   return p2
 }
 
-const doit2 = (max, p2, from, to) => {
+const doit2 = (max, p2, from, to, dir) => {
   const x = []
   let extras = 0
   p2.forEach((p) => {
@@ -37,23 +37,25 @@ const doit2 = (max, p2, from, to) => {
     else ++extras
   })
   if (extras) x.push({ el: (extras * max) / 4, n: extras })
-  return { x, from, to }
+  return { x, from, to, dir }
 }
 
-const doit = (max, commits) => {
+const doit = (dir, max, commits) => {
   let from
   let to
   if (commits.length) {
     from = commits[0]
     to = commits[commits.length - 1]
   }
-  return doit2(max, doit1(max, doit0(commits)), from, to)
+  return doit2(max, doit1(max, doit0(commits)), from, to, dir)
 }
 
 const vava = async (dir, max) => {
+  dir = path.resolve(dir)
   try {
     const commits = await git.log({ dir })
     return doit(
+      dir,
       max,
       commits.reverse().map(({ author: { timestamp } }) => timestamp)
     )
@@ -67,7 +69,7 @@ const vava = async (dir, max) => {
   }
 }
 
-const stats = ({ x, from, to }) => {
+const stats = ({ x, from, to, dir }) => {
   const s = x.reduce(
     (a, b) => {
       return {
@@ -79,6 +81,7 @@ const stats = ({ x, from, to }) => {
   )
   const mc = Math.round(s.el / (s.n * 60))
   return {
+    dir,
     from,
     to,
     stats: `${x.length} spurts; ${Math.round(s.el / 360) / 10}h total; ${

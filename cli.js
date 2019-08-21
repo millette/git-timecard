@@ -26,7 +26,8 @@ const ld = (ts) => new Date(ts * 1000).toDateString()
 
 updateNotifier(cli).notify()
 run({ dir: cli.input[0], max: cli.flags.gap })
-  .then(({ from, to, stats }) => {
+  .then(({ from, to, stats, dir }) => {
+    console.log("Directory:", dir)
     console.log(`From ${ld(from)} until ${ld(to)}:`)
     console.log(stats)
   })
