@@ -22,9 +22,14 @@ const cli = meow(
   { flags: { gap: { alias: "g" } } }
 )
 
+const ld = (ts) => new Date(ts * 1000).toDateString()
+
 updateNotifier(cli).notify()
 run({ dir: cli.input[0], max: cli.flags.gap })
-  .then(console.log)
+  .then(({ from, to, stats }) => {
+    console.log(`From ${ld(from)} until ${ld(to)}:`)
+    console.log(stats)
+  })
   .catch((e) =>
     console.error(e.name === "ResolveRefError" ? "No .git directory found." : e)
   )

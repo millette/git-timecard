@@ -28,19 +28,27 @@ const doit1 = (max, els) => {
   return p2
 }
 
-const doit2 = (max, p2) => {
-  const p3 = []
+const doit2 = (max, p2, from, to) => {
+  const x = []
   let extras = 0
   p2.forEach((p) => {
     const n = p.length
-    if (n > 1) p3.push({ el: p[n - 1].ts - p[0].ts, n })
+    if (n > 1) x.push({ el: p[n - 1].ts - p[0].ts, n })
     else ++extras
   })
-  if (extras) p3.push({ el: (extras * max) / 4, n: extras })
-  return p3
+  if (extras) x.push({ el: (extras * max) / 4, n: extras })
+  return { x, from, to }
 }
 
-const doit = (max, commits) => doit2(max, doit1(max, doit0(commits)))
+const doit = (max, commits) => {
+  let from
+  let to
+  if (commits.length) {
+    from = commits[0]
+    to = commits[commits.length - 1]
+  }
+  return doit2(max, doit1(max, doit0(commits)), from, to)
+}
 
 const vava = async (dir, max) => {
   try {
@@ -59,7 +67,7 @@ const vava = async (dir, max) => {
   }
 }
 
-const stats = (x) => {
+const stats = ({ x, from, to }) => {
   const s = x.reduce(
     (a, b) => {
       return {
@@ -70,9 +78,13 @@ const stats = (x) => {
     { el: 0, n: 0 }
   )
   const mc = Math.round(s.el / (s.n * 60))
-  return `${x.length} spurts; ${Math.round(s.el / 360) / 10}h total; ${
-    s.n
-  } commits; ${Math.round(s.n / x.length)} commits/spurt; ${mc} min./commit.`
+  return {
+    from,
+    to,
+    stats: `${x.length} spurts; ${Math.round(s.el / 360) / 10}h total; ${
+      s.n
+    } commits; ${Math.round(s.n / x.length)} commits/spurt; ${mc} min./commit.`,
+  }
 }
 
 module.exports = (opts = {}) =>
