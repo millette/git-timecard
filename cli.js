@@ -4,6 +4,7 @@
 
 // npm
 const meow = require("meow")
+const updateNotifier = require("update-notifier")
 
 // self
 const run = require(".")
@@ -14,9 +15,12 @@ const cli = meow(
 	  $ gtc <dir> Defaults to current directory
 
 	Options
-	  --gap, -g  Maximum gap in minutes (defaults to 120; 2h)
+		--gap, -g  	Maximum gap in minutes (defaults to 120; 2h)
+		--version		Output version
+		--help			This help
 `,
   { flags: { gap: { alias: "g" } } }
 )
 
+updateNotifier(cli).notify()
 run({ dir: cli.input[0], max: cli.flags.gap }).catch(console.error)
