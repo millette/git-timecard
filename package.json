@@ -1,6 +1,6 @@
 {
   "name": "git-timecard",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "bin": {
     "gtc": "cli.js"
   },
