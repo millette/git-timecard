@@ -1,19 +1,22 @@
 #!/usr/bin/env node
 
-'use strict'
+"use strict"
 
 // npm
-const meow = require('meow')
+const meow = require("meow")
 
 // self
-const run = require('.')
+const run = require(".")
 
-const cli = meow(`
+const cli = meow(
+  `
 	Usage
-	  $ gtc <dir>
+	  $ gtc <dir> Defaults to current directory
 
 	Options
 	  --gap, -g  Maximum gap in minutes (defaults to 120; 2h)
-`, { flags: { gap: { alias: 'g' } } })
+`,
+  { flags: { gap: { alias: "g" } } }
+)
 
-run({dir: cli.input[0], max: cli.flags.gap}).catch(console.error)
+run({ dir: cli.input[0], max: cli.flags.gap }).catch(console.error)
