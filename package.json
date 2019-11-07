@@ -1,11 +1,16 @@
 {
   "name": "git-timecard",
+  "description": "Single-user git based timecard.",
   "version": "0.0.4",
   "bin": {
     "gtc": "cli.js"
   },
   "scripts": {
     "test": "healthier && node cli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/millette/git-timecard.git"
   },
   "author": {
     "name": "Robin Millette",
