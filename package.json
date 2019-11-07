@@ -5,7 +5,7 @@
     "gtc": "cli.js"
   },
   "scripts": {
-    "test": "healthier"
+    "test": "healthier && node cli"
   },
   "author": {
     "name": "Robin Millette",
