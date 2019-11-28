@@ -38,7 +38,7 @@
     "arrowParens": "always"
   },
   "dependencies": {
-    "isomorphic-git": "^0.70.5",
+    "isomorphic-git": "^0.70.8",
     "meow": "^5.0.0",
     "update-notifier": "^3.0.1"
   },
