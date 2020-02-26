@@ -7,8 +7,6 @@ const path = require("path")
 // npm
 const git = require("isomorphic-git")
 
-git.plugins.set("fs", fs)
-
 const doit0 = (commits) =>
   commits.reduce((a, ts) => {
     const el = a.length && ts - a[a.length - 1].ts
@@ -53,11 +51,17 @@ const doit = (dir, max, commits) => {
 const vava = async (dir, max) => {
   dir = path.resolve(dir)
   try {
-    const commits = await git.log({ dir })
+    const commits = await git.log({ fs, dir })
     return doit(
       dir,
       max,
-      commits.reverse().map(({ author: { timestamp } }) => timestamp)
+      commits.reverse().map(
+        ({
+          commit: {
+            author: { timestamp },
+          },
+        }) => timestamp
+      )
     )
   } catch (e) {
     if (e.name === "ResolveRefError") {
