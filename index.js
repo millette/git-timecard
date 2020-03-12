@@ -64,7 +64,7 @@ const vava = async (dir, max) => {
       )
     )
   } catch (e) {
-    if (e.name === "ResolveRefError") {
+    if (e.name === "NotFoundError") {
       const d2 = path.resolve(dir, "..")
       if (dir === d2) throw e
       return vava(d2, max)
