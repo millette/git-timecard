@@ -6,10 +6,10 @@
     "gtc": "cli.js"
   },
   "scripts": {
-    "test": "healthier && node cli",
+    "test": "healthier && node cli.mjs",
     "posttest": "npm run format",
     "prepare": "husky install",
-    "format": "prettier --loglevel warn --write \"**/*.{js,css,md}\""
+    "format": "prettier --loglevel warn --write \"**/*.{json,js,mjs,css,md}\""
   },
   "repository": {
     "type": "git",
@@ -21,23 +21,19 @@
     "url": "http://robin.millette.info"
   },
   "engines": {
-    "node": ">= 12.14.1"
+    "node": ">= 14.0.0"
   },
   "license": "AGPL-3.0",
   "lint-staged": {
     "*.{js,json,md}": [
       "prettier --write"
     ],
-    "*.{js,css,md}": "prettier --write"
-  },
-  "prettier": {
-    "semi": false,
-    "trailingComma": "es5"
+    "*.{json,js,mjs,css,md}": "prettier --write"
   },
   "dependencies": {
-    "isomorphic-git": "^1.7.3",
-    "meow": "^7.0.1",
-    "update-notifier": "^4.1.0"
+    "isomorphic-git": "^1.8.2",
+    "meow": "^10.0.0",
+    "update-notifier": "^5.1.0"
   },
   "devDependencies": {
     "healthier": "^4.0.0",
