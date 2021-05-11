@@ -3,7 +3,7 @@
   "description": "Single-user git based timecard.",
   "version": "0.4.1",
   "bin": {
-    "gtc": "cli.js"
+    "gtc": "cli.mjs"
   },
   "scripts": {
     "test": "healthier && node cli.mjs",
