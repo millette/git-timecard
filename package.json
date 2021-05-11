@@ -6,7 +6,10 @@
     "gtc": "cli.js"
   },
   "scripts": {
-    "test": "healthier && node cli"
+    "test": "healthier && node cli",
+    "posttest": "npm run format",
+    "prepare": "husky install",
+    "format": "prettier --loglevel warn --write \"**/*.{js,css,md}\""
   },
   "repository": {
     "type": "git",
@@ -24,12 +27,8 @@
   "lint-staged": {
     "*.{js,json,md}": [
       "prettier --write"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    ],
+    "*.{js,css,md}": "prettier --write"
   },
   "prettier": {
     "semi": false,
@@ -41,9 +40,10 @@
     "update-notifier": "^4.1.0"
   },
   "devDependencies": {
-    "healthier": "^3.3.0",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5"
+    "healthier": "^4.0.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "mrm": "^3.0.1",
+    "prettier": "^2.3.0"
   }
 }
