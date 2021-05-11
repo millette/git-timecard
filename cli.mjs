@@ -19,9 +19,13 @@ const cli = meow(
 		--version		Output version
 		--help			This help
 `,
-  { 
-    flags: { gap: { alias: "g" } },
-    importMeta: import.meta, 
+  {
+    flags: {
+      gap: {
+        alias: "g",
+      },
+    },
+    importMeta: import.meta,
   }
 )
 
