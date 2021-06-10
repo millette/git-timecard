@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "isomorphic-git": "^1.8.2",
-    "meow": "^10.0.0",
+    "meow": "^10.0.1",
     "update-notifier": "^5.1.0"
   },
   "devDependencies": {
@@ -41,7 +41,7 @@
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "mrm": "^3.0.2",
-    "prettier": "^2.3.0",
-    "verdaccio-fix": "^0.3.3"
+    "prettier": "^2.3.1",
+    "verdaccio-fix": "^0.3.4"
   }
 }
