@@ -10,7 +10,7 @@
     "posttest": "npm run format",
     "prepare": "husky install",
     "format": "prettier --loglevel warn --write \"**/*.{json,js,mjs,css,md}\"",
-    "verdaccio-fix": "verdaccio-fix"
+    "fix": "verdaccio-fix"
   },
   "repository": {
     "type": "git",
