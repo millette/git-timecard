@@ -39,7 +39,7 @@
   "devDependencies": {
     "healthier": "^5.0.1",
     "husky": "^8.0.1",
-    "lint-staged": "^12.1.2",
+    "lint-staged": "^13.0.1",
     "mrm": "^4.0.0",
     "prettier": "^2.4.1",
     "verdaccio-fix": "^0.3.4"
