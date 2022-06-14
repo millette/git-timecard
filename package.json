@@ -40,7 +40,7 @@
     "healthier": "^5.0.1",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
-    "mrm": "^3.0.10",
+    "mrm": "^4.0.0",
     "prettier": "^2.4.1",
     "verdaccio-fix": "^0.3.4"
   }
