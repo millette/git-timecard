@@ -1,11 +1,14 @@
 "use strict"
 
 // core
-const fs = require("fs")
-const path = require("path")
+// const fs = require("fs")
+import fs from "fs"
+// const path = require("path")
+import path from "path"
 
 // npm
-const git = require("isomorphic-git")
+// const git = require("isomorphic-git")
+import git from "isomorphic-git"
 
 const doit0 = (commits) =>
   commits.reduce((a, ts) => {
@@ -94,5 +97,5 @@ const stats = ({ x, from, to, dir }) => {
   }
 }
 
-module.exports = (opts = {}) =>
+export default (opts = {}) =>
   vava(opts.dir || ".", (opts.max || 120) * 60).then(stats)
