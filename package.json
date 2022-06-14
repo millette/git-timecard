@@ -37,7 +37,7 @@
     "update-notifier": "^5.1.0"
   },
   "devDependencies": {
-    "healthier": "^4.0.0",
+    "healthier": "^5.0.1",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
     "mrm": "^3.0.10",
