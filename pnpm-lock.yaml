@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   healthier: ^5.0.1
   husky: ^8.0.1
-  isomorphic-git: ^1.18.2
+  isomorphic-git: ^1.21.0
   lint-staged: ^13.0.1
   meow: ^10.1.2
   mrm: ^4.0.0
@@ -12,7 +12,7 @@ specifiers:
   verdaccio-fix: ^0.3.4
 
 dependencies:
-  isomorphic-git: 1.18.2
+  isomorphic-git: 1.21.0
   meow: 10.1.2
   update-notifier: 5.1.0
 
@@ -1869,8 +1869,8 @@ packages:
     resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=}
     dev: true
 
-  /isomorphic-git/1.18.2:
-    resolution: {integrity: sha512-EoUdAQYZgNIkK7JPddtDaWxL4EeaBQH0Q6hsQwhfxcIXVvBdWn1f36WsMKEIediMpW2hkJXQsfeCk0tqaO9yRw==}
+  /isomorphic-git/1.21.0:
+    resolution: {integrity: sha512-ZqCAUM63CYepA3fB8H7NVyPSiOkgzIbQ7T+QPrm9xtYgQypN9JUJ5uLMjB5iTfomdJf3mdm6aSxjZwnT6ubvEA==}
     engines: {node: '>=12'}
     hasBin: true
     dependencies:

@@ -33,7 +33,7 @@
     "*.{json,js,css,md}": "prettier --write"
   },
   "dependencies": {
-    "isomorphic-git": "^1.18.2",
+    "isomorphic-git": "^1.21.0",
     "meow": "^10.1.2",
     "update-notifier": "^5.1.0"
   },
