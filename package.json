@@ -1,7 +1,7 @@
 {
   "name": "git-timecard",
   "description": "Single-user git based timecard.",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "type": "module",
   "bin": {
     "gtc": "cli.js"
