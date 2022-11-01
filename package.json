@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "isomorphic-git": "^1.21.0",
-    "meow": "^10.1.2",
+    "meow": "^11.0.0",
     "update-notifier": "^5.1.0"
   },
   "devDependencies": {
