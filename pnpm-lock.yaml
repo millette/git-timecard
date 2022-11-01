@@ -4,7 +4,7 @@ specifiers:
   healthier: ^5.0.1
   husky: ^8.0.1
   isomorphic-git: ^1.21.0
-  lint-staged: ^13.0.1
+  lint-staged: ^13.0.3
   meow: ^10.1.2
   mrm: ^4.0.0
   prettier: ^2.7.0
@@ -19,7 +19,7 @@ dependencies:
 devDependencies:
   healthier: 5.0.1
   husky: 8.0.1
-  lint-staged: 13.0.1
+  lint-staged: 13.0.3
   mrm: 4.0.0
   prettier: 2.7.0
   verdaccio-fix: 0.3.4
@@ -2000,8 +2000,8 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: false
 
-  /lint-staged/13.0.1:
-    resolution: {integrity: sha512-Ykaf4QTi0a02BF7cnq7JIPGOJxH4TkNMWhSlJdH9wOekd0X+gog47Jfh/0L31DqZe5AiydLGC7LkPqpaNm+Kvg==}
+  /lint-staged/13.0.3:
+    resolution: {integrity: sha512-9hmrwSCFroTSYLjflGI8Uk+GWAwMB4OlpU4bMJEAT5d/llQwtYKoim4bLOyLCuWFAhWEupE0vkIFqtw/WIsPug==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
