@@ -7,7 +7,7 @@ specifiers:
   lint-staged: ^13.0.3
   meow: ^10.1.2
   mrm: ^4.0.0
-  prettier: ^2.7.0
+  prettier: ^2.7.1
   update-notifier: ^5.1.0
   verdaccio-fix: ^0.3.4
 
@@ -21,7 +21,7 @@ devDependencies:
   husky: 8.0.1
   lint-staged: 13.0.3
   mrm: 4.0.0
-  prettier: 2.7.0
+  prettier: 2.7.1
   verdaccio-fix: 0.3.4
 
 packages:
@@ -2688,8 +2688,8 @@ packages:
     resolution: {integrity: sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=}
     engines: {node: '>=4'}
 
-  /prettier/2.7.0:
-    resolution: {integrity: sha512-nwoX4GMFgxoPC6diHvSwmK/4yU8FFH3V8XWtLQrbj4IBsK2pkYhG4kf/ljF/haaZ/aii+wNJqISrCDPgxGWDVQ==}
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
