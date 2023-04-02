@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   isomorphic-git:
-    specifier: ^1.21.0
-    version: 1.21.0
+    specifier: ^1.23.0
+    version: 1.23.0
   meow:
     specifier: ^11.0.0
     version: 11.0.0
@@ -2282,8 +2282,8 @@ packages:
     resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=}
     dev: true
 
-  /isomorphic-git@1.21.0:
-    resolution: {integrity: sha512-ZqCAUM63CYepA3fB8H7NVyPSiOkgzIbQ7T+QPrm9xtYgQypN9JUJ5uLMjB5iTfomdJf3mdm6aSxjZwnT6ubvEA==}
+  /isomorphic-git@1.23.0:
+    resolution: {integrity: sha512-7mQlnZivFwrU6B3CswvmoNtVN8jqF9BcLf80uk7yh4fNA8PhFjAfQigi2Hu/Io0cmIvpOc7vn0/Rq3KtL5Ph8g==}
     engines: {node: '>=12'}
     hasBin: true
     dependencies:
@@ -2705,12 +2705,11 @@ packages:
 
   /minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
-    dev: true
 
   /minimisted@2.0.1:
     resolution: {integrity: sha512-1oPjfuLQa2caorJUM8HV8lGgWCc0qqAO1MNv/k05G4qslmsndV/5WdNZrqCiyqiz3wohia2Ij2B7w2Dr7/IyrA==}
     dependencies:
-      minimist: 1.2.6
+      minimist: 1.2.8
     dev: false
 
   /mrm-core@7.1.14:
